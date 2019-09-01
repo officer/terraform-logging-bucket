@@ -21,3 +21,10 @@ variable "expiration_days" {
   default       = 90
 }
 
+
+variable "tags" {
+  description = "tags"
+  type = "map"
+}
+
+
