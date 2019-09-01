@@ -11,13 +11,13 @@ variable "namespace" {
 
 variable "transition_days" {
   description   = "Days for transition to STANDARD_IA"
-  type          = "number"
+  type          = number
   default       = 30
 }
 
 variable "expiration_days" {
   description   = "Days for expiration"
-  type          = "number"
+  type          = number
   default       = 90
 }
 
@@ -25,6 +25,9 @@ variable "expiration_days" {
 variable "tags" {
   description = "tags"
   type = "map"
+  default = {
+      "Resource": "Logging-bucket"
+  }
 }
 
 
