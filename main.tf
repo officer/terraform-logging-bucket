@@ -2,7 +2,7 @@ resource "aws_s3_bucket" "logging_bucket" {
   region        = "${var.region}"
   bucket_prefix = "${var.namespace}-logging-"
   acl           = "log-delivery-write"
-  force_destroy = true
+  force_destroy = "${var.force_destroy == "true" ? true : false}"
 
   lifecycle_rule {
     id            = "expire for log"

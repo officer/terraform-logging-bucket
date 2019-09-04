@@ -21,6 +21,11 @@ variable "expiration_days" {
   default       = 90
 }
 
+variable "force_destroy" {
+  description   = "Whether delete all objects and force destroy"
+  type          = "string"
+  default       = "false"
+}
 
 variable "tags" {
   description = "tags"
