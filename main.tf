@@ -16,6 +16,6 @@ resource "aws_s3_bucket" "logging_bucket" {
         days        = "${var.expiration_days}"
     }
   }
-
+  
   tags = "${var.tags}"
 }
