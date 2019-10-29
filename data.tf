@@ -2,7 +2,9 @@
 data "aws_iam_policy_document" "bucket_policy" {
   statement {
       effect = "Allow"
-      actions = "s3:PutObject"
+      actions = [
+        "s3:PutObject"
+      ]
       resources = [
           "${aws_s3_bucket.logging_bucket.arn}/*"
       ]
